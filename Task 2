@@ -1,0 +1,107 @@
+using System;
+using System.Collections.Generic;
+
+class Task1
+{
+    public static void Run()
+    {
+        string name = "Gyanendra Basnet";
+        int favNum = 8;
+        Console.WriteLine($"Hi {name}, your favorite number is {favNum}.");
+    }
+}
+
+class Circle
+{
+    public const double PI = 3.14;
+    public static double Area(double r) => PI * r * r;
+    public static double Circumference(double r) => 2 * PI * r;
+}
+class Task2
+{
+    public static void Run()
+    {
+        double radius = 6;
+        Console.WriteLine($"Area: {Circle.Area(radius)}");
+        Console.WriteLine($"Circumference: {Circle.Circumference(radius)}");
+    }
+}
+
+class Task3
+{
+    public static void Run()
+    {
+        byte b = 10;
+        int i = 200;
+        float f = 5.6f;
+        double d = 9.8;
+        decimal dec = 10.25m;
+        char ch = 'A';
+        bool status = true;
+
+        string strVal = i.ToString();
+        double dblVal = Convert.ToDouble("5.5");
+
+        Console.WriteLine($"byte: {b}, int: {i}, float: {f}, double: {d}, decimal: {dec}, char: {ch}, bool: {status}");
+        Console.WriteLine($"Converted int to string: {strVal}");
+        Console.WriteLine($"Converted string to double: {dblVal}");
+    }
+}
+
+class Task4
+{
+    public static void Run()
+    {
+        int[] nums = { 9, 4, 2, 7, 5 };
+        Array.Sort(nums);
+        Array.Reverse(nums);
+        Console.WriteLine("Sorted & Reversed Array:");
+        foreach (int n in nums) Console.WriteLine(n);
+
+        int index = Array.IndexOf(nums, 7);
+        Console.WriteLine($"Index of 7: {index}");
+    }
+}
+
+class Task5
+{
+    public static void Run()
+    {
+        List<string> fruits = new List<string> { "Apple", "Mango", "Orange" };
+        fruits.Add("Grapes");
+        fruits.Remove("Mango");
+
+        Console.WriteLine("Fruits List:");
+        foreach (var fruit in fruits) Console.WriteLine(fruit);
+
+        Dictionary<int, string> fruitDict = new Dictionary<int, string>
+        {
+            {1, "Apple"}, {2, "Orange"}, {3, "Grapes"}
+        };
+        fruitDict.Add(4, "Pineapple");
+
+        Console.WriteLine("\nFruit Dictionary:");
+        foreach (var item in fruitDict) Console.WriteLine($"{item.Key} -> {item.Value}");
+    }
+}
+
+class Program
+{
+    static void Main()
+    {
+        Console.WriteLine("----- Task 1 -----");
+        Task1.Run();
+
+        Console.WriteLine("\n----- Task 2 -----");
+        Task2.Run();
+
+        Console.WriteLine("\n----- Task 3 -----");
+        Task3.Run();
+
+        Console.WriteLine("\n----- Task 4 -----");
+        Task4.Run();
+
+        Console.WriteLine("\n----- Task 5 -----");
+        Task5.Run();
+    }
+}
