@@ -1,0 +1,7 @@
+﻿Build started at 12:11 PM...
+1>------ Build started: Project: ConsoleApp1, Configuration: Debug Any CPU ------
+1>C:\Program Files\dotnet\sdk\10.0.100-rc.2.25502.107\Sdks\Microsoft.NET.Sdk\targets\Microsoft.NET.RuntimeIdentifierInference.targets(351,5): message NETSDK1057: You are using a preview version of .NET. See: https://aka.ms/dotnet-support-policy
+1>  Skipping analyzers to speed up the build. You can execute 'Build' or 'Rebuild' command to run analyzers.
+1>  ConsoleApp1 -> C:\Users\xking\source\repos\ConsoleApp1\ConsoleApp1\bin\Debug\net9.0\ConsoleApp1.dll
+========== Build: 1 succeeded, 0 failed, 0 up-to-date, 0 skipped ==========
+========== Build completed at 12:11 PM and took 01.242 seconds ==========
