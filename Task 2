@@ -17,6 +17,7 @@ class Circle
     public static double Area(double r) => PI * r * r;
     public static double Circumference(double r) => 2 * PI * r;
 }
+
 class Task2
 {
     public static void Run()
@@ -67,6 +68,29 @@ class Task5
 {
     public static void Run()
     {
+        DateTime birthDate = new DateTime(2000, 5, 15);
+        DateTime currentDate = DateTime.Now;
+
+        // Calculate the difference
+        TimeSpan ageSpan = currentDate - birthDate;
+
+        // Convert to years approximately
+        int ageInYears = (int)(ageSpan.Days / 365.25);
+
+        Console.WriteLine($"Birthdate: {birthDate.ToShortDateString()}");
+        Console.WriteLine($"Current Date: {currentDate}");
+        Console.WriteLine($"Age: {ageInYears} years");
+
+        // Add 10 days to the birthdate
+        DateTime newDate = birthDate.AddDays(10);
+        Console.WriteLine($"Birthdate + 10 days: {newDate.ToShortDateString()}");
+    }
+}
+
+class Task6
+{
+    public static void Run()
+    {
         List<string> fruits = new List<string> { "Apple", "Mango", "Orange" };
         fruits.Add("Grapes");
         fruits.Remove("Mango");
@@ -103,5 +127,8 @@ class Program
 
         Console.WriteLine("\n----- Task 5 -----");
         Task5.Run();
+
+        Console.WriteLine("\n----- Task 6 -----");
+        Task6.Run();
     }
 }
